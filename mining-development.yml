@@ -3,8 +3,8 @@ correcao:true
 abrangencia:
 insercao:
 pesoCorrecao:
-pesoOrtografia:3
+pesoOrtografia:dsd
 thesaurus:true
 ontologia:false
 onlineSearch:false
-numConcepts:3
+numConcepts:das

@@ -1,10 +1,10 @@
-user:goDa
-correcao:false
+user:goSi
+correcao:
 abrangencia:
 insercao:
 pesoCorrecao:
-pesoOrtografia:mk
-thesaurus:true
-ontologia:false
-onlineSearch:false
-numConcepts:mm
+pesoOrtografia:0
+thesaurus:
+ontologia:
+onlineSearch:
+numConcepts:00

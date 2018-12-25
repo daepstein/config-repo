@@ -37,7 +37,9 @@ fwrite($myfile, 'numConcepts:'.$numConcepts.$endLine);
 
 fclose($myfile);
 echo ("tentando gravar...");
-exec('./home/bitnami/htdocs/config-repo/config-repo/updateGit.sh');
+chdir('/home/bitnami/htdocs/config-repo/config-repo/');
+
+shell_exec('./updateGit.sh');
 exec('git add .');
 exec('git commit -m \"atualizando\"');
 exec('git push');

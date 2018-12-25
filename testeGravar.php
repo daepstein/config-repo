@@ -5,12 +5,16 @@ echo '2';
 echo ("tentando gravar...");
 chdir('/home/bitnami/htdocs/config-repo/config-repo/');
 $message=shell_exec('ls -la');
-echo $message;
-$out = shell_exec('./updateGit.sh');
+//echo $message;
+$out = shell_exec('su ./updateGit.sh');
 shell_exec("git add .");
 shell_exec("git commit -m \"atualizando\"");
 shell_exec("git push");
-echo $out;
+//echo $out;
+
+echo "<br>3";
+shell_exec('git commit -m \"tese\" '.' 2>&1', $output, $return_var);
+var_dump($output);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $correcao = $_POST["correcao"];

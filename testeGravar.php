@@ -1,6 +1,17 @@
 <?php
 echo '2';
 
+
+echo ("tentando gravar...");
+chdir('/home/bitnami/htdocs/config-repo/config-repo/');
+$message=shell_exec('ls -la');
+echo $message;
+$out = shell_exec('./updateGit.sh');
+shell_exec("git add .");
+shell_exec("git commit -m \"atualizando\"");
+shell_exec("git push");
+echo $out;
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $correcao = $_POST["correcao"];
 $name = $_POST["name"];

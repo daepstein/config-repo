@@ -1,11 +1,10 @@
-ws
-user:goDa
+user:goSi
 correcao:
 abrangencia:
 insercao:
 pesoCorrecao:
-pesoOrtografia:7
-thesaurus:
+pesoOrtografia:z
+thesaurus:true
 ontologia:
 onlineSearch:
-numConcepts:
+numConcepts:z

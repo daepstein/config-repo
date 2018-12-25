@@ -1,0 +1,8 @@
+user:goSi
+correcao:true
+abrangencia:
+insercao:
+pesoCorrecao:
+thesaurus:
+ontologia:
+onlineSearch:

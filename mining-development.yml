@@ -1,2 +1,10 @@
-teste: testandominindDev
-number: 20
+user:goDa
+correcao:true
+abrangencia:
+insercao:
+pesoCorrecao:
+pesoOrtografia:1
+thesaurus:true
+ontologia:false
+onlineSearch:false
+numConcepts:1

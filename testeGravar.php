@@ -1,5 +1,6 @@
 <?php
 echo '2';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $correcao = $_POST["correcao"];
 $name = $_POST["name"];
@@ -38,12 +39,13 @@ fwrite($myfile, 'numConcepts:'.$numConcepts.$endLine);
 fclose($myfile);
 echo ("tentando gravar...");
 chdir('/home/bitnami/htdocs/config-repo/config-repo/');
-
-shell_exec('./updateGit.sh');
-exec('git add .');
-exec('git commit -m \"atualizando\"');
-exec('git push');
-//echo $output;
+$message=shell_exec('ls -la');
+echo $message;
+$out = shell_exec('./updateGit.sh');
+shell_exec("git add .");
+shell_exec("git commit -m \"atualizando\"");
+shell_exec("git push");
+echo $out;
 //echo $return_var;
 echo "<br>";
 
@@ -124,16 +126,4 @@ Usar Ontologias: (Irá utilizar ontologias predefinidas para melhorar o resultad
     <input type="submit" name="submit" value="Submit">
 
 </form>
-
-
-<?php
-echo "<h2>Your Input:</h2>";
-echo $name;
-echo "<br>";
-echo $correcao;
-echo "<br>";
-echo $inst;
-echo "<br>";
-
-?>
 

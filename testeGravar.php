@@ -36,12 +36,13 @@ fwrite($myfile, 'numConcepts:'.$numConcepts.$endLine);
 
 
 fclose($myfile);
-
-exec('git add .', $output, $return_var);
-exec('git commit -m "atualizando"');
+echo ("tentando gravar...");
+exec('./home/bitnami/htdocs/config-repo/config-repo/updateGit.sh');
+exec('git add .');
+exec('git commit -m \"atualizando\"');
 exec('git push');
-echo $output;
-echo $return_var;
+//echo $output;
+//echo $return_var;
 echo "<br>";
 
 $opts = array('http' =>

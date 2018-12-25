@@ -3,8 +3,8 @@ correcao:true
 abrangencia:
 insercao:
 pesoCorrecao:
-pesoOrtografia:1
+pesoOrtografia:3
 thesaurus:true
 ontologia:false
 onlineSearch:false
-numConcepts:1
+numConcepts:3

@@ -1,4 +1,5 @@
 <?php
+echo '2';
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $correcao = $_POST["correcao"];
 $name = $_POST["name"];
@@ -36,8 +37,9 @@ fwrite($myfile, 'numConcepts:'.$numConcepts.$endLine);
 
 fclose($myfile);
 
-$output = exec('./updateGit.sh');
+exec('git add .', $output, $return_var);
 echo $output;
+echo $return_var;
 echo "<br>";
 
 $opts = array('http' =>

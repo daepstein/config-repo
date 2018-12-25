@@ -13,6 +13,9 @@ $thesaurus = $_POST["thesaurus"];
 $ontologia = $_POST["ontologia"];
 $onlineSearch = $_POST["onlineSearch"];
 $numConcepts = $_POST["numConcepts"];
+$numConcepts = $_POST["pesoComp"];
+$numConcepts = $_POST["pesoBase"];
+
 
 if ( $_POST["senha"] != "goSi" && $_POST["senha"] != "goJo" && $_POST["senha"] != "goDa"){
 die("Senha inexistente!");
@@ -33,6 +36,8 @@ fwrite($myfile, 'thesaurus:'.$thesaurus.$endLine);
 fwrite($myfile, 'ontologia:'.$ontologia.$endLine);
 fwrite($myfile, 'onlineSearch:'.$onlineSearch.$endLine);
 fwrite($myfile, 'numConcepts:'.$numConcepts.$endLine);
+fwrite($myfile, 'pesoBse:'.$pesoBase.$endLine);
+fwrite($myfile, 'pesoComp:'.$pesoComp.$endLine);
 
 
 fclose($myfile);
@@ -83,9 +88,9 @@ pedaço irrelevante do conteúdo)<br>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">  
 
 <br>
-Peso dos conceitos em comum em relacao ao total de conceitos do texto base: <input type="text" name="simplesBase">
+Peso dos conceitos em comum em relacao ao total de conceitos do texto base: <input type="text" name="abrangencia">
 <br><br>
-Peso dos conceitos em comum em relacao ao total de conceitos do texto do aluno: <input type="text" name="simplesComp">
+Peso dos conceitos em comum em relacao ao total de conceitos do texto do aluno: <input type="text" name="insercao">
 <br><br>
 Peso dos conceitos em comum em relacao ao total das frequencias do texto do aluno <br>(ou seja, quanta relevancia os 
 termos em comum tem em relacao a todos os termos extraidos do texto do aluno): <input type="text" name="pesoComp">

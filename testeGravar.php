@@ -2,19 +2,19 @@
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $correcao = $_POST["correcao"];
-$name = $_POST["name"];
-$inst =  $_POST["senha"];
-$correcao = $_POST["correcao"];
-$abrangencia = $_POST["abrangencia"];
-$insercao = $_POST["insercao"];
-$pesoCorrecao = $_POST["pesoCorrecao"];
-$pesoOrtografia = $_POST["pesoOrtografia"];
-$thesaurus = $_POST["thesaurus"];
-$ontologia = $_POST["ontologia"];
-$onlineSearch = $_POST["onlineSearch"];
-$numConcepts = $_POST["numConcepts"];
-$numConcepts = $_POST["pesoComp"];
-$numConcepts = $_POST["pesoBase"];
+$name = $_POST["name"] == null ? 'Erro' : $_POST["name"];
+$inst =  $_POST["senha"] != null ? $_POST["senha"] :0;
+$correcao = $_POST["correcao"] != null ? $_POST["correcao"] :0;
+$abrangencia = $_POST["abrangencia"] != null ? $_POST["abrangencia"] :0;
+$insercao = $_POST["insercao"] != null ? $_POST["insercao"] :0;
+$pesoCorrecao = $_POST["pesoCorrecao"] != null ? $_POST["pesoCorrecao"] :0;
+$pesoOrtografia = $_POST["pesoOrtografia"] != null ? $_POST["pesoOrtografia"] :0;
+$thesaurus = $_POST["thesaurus"] != null ? $_POST["thesaurus"] :0;
+$ontologia = $_POST["ontologia"] != null ? $_POST["ontologia"] :0;
+$onlineSearch = $_POST["onlineSearch"] != null ? $_POST["onlineSearch"] :0;
+$numConcepts = $_POST["numConcepts"] != null ? $_POST["numConcepts"] :0;
+$pesoComp = $_POST["pesoComp"] != null ? $_POST["pesoComp"] :0;
+$pesoBase = $_POST["pesoBase"] != null ? $_POST["pesoBase"] :0;
 
 
 if ( $_POST["senha"] != "goSi" && $_POST["senha"] != "goJo" && $_POST["senha"] != "goDa"){

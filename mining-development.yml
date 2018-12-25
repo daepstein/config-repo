@@ -3,8 +3,8 @@ correcao:
 abrangencia:
 insercao:
 pesoCorrecao:
-pesoOrtografia:ij
+pesoOrtografia:
 thesaurus:
-ontologia:
-onlineSearch:
-numConcepts:i
+ontologia:false
+onlineSearch:true
+numConcepts:pp
